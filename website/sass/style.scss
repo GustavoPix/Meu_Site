@@ -1,0 +1,29 @@
+@import "mixins";
+@import "variables";
+@import "grid";
+@import "reset";
+
+@import "header";
+@import "banner";
+@import "trabalhos";
+@import "sobre";
+@import "contatos";
+@import "footer";
+@import "project";
+
+body{
+    background: $black3;
+    padding-top: 30vh;
+}
+.container{
+    &:before{
+        content: '';
+        display: block;
+        width: 2px;
+        height: 100%;
+        background: $color1;
+        position: absolute;
+        left: -20px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,126 @@
+.project{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    .left{
+        overflow-y: auto;
+        width: calc(100vw - 500px);
+    }
+    .right{
+        width: 500px;
+        max-width: 500px;
+        min-width: 500px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        .top{
+            height: 100%;
+            h2{
+                font-family: $font2;
+                font-size: 40px;
+                color: $black1;
+                font-weight: normal;
+                span{
+                    color: $color1;
+                }
+                .cursor{
+                    border-right: 2px solid $white1;
+                    animation-name: kf_cursorBanner;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+            }
+            p{
+                font-family: $font1;
+                font-size: 20px;
+                color: $black2;
+                margin-bottom: 20px;
+                font-weight: normal;
+            }
+            h1{
+                font-family: $font1;
+                font-size: 40px;
+                color: $white1;
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+            .descricao{
+                font-size: 14px;
+                line-height: 1.2;
+            }
+            button{
+                padding: 10px 15px;
+                background: none;
+                border: 2px solid $color1;
+                
+                font-weight: normal;
+                border-radius: 20px;
+                transition: 0.3s ease;
+                cursor: pointer;
+                a{
+                    font-family: $font1;
+                    font-size: 14px;
+                    color: $white1;
+                    transition: 0.3s ease;
+                }
+                &:hover{
+                    background: $white1;
+                    color: $color1;
+                    border: 2px solid $white1;
+                    a{
+                        color: $color1;
+                    }
+                }
+            }
+        }
+        .bottom{
+            p{
+                a{
+
+                    font-family: $font1;
+                    font-size: 20px;
+                    color: $black2;
+                    margin-bottom: 20px;
+                    font-weight: normal;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        color: $white1;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive('m'){
+        .left{
+            width: 60vw;
+        }
+        .right{
+            width: 40vw;
+            max-width: 40vw;
+            min-width: 40vw;
+        }
+    }
+    @include responsive('s'){
+        flex-direction: column;
+        height: auto;
+        .right{
+            order: 1;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
+            flex-direction: column-reverse;
+            .bottom{
+                margin-bottom: 40px;
+            }
+        }
+        .left{
+            order: 2;
+            width: 100vw;
+        }
+    }
+}
+.noPaddingTop{
+    padding-top: 0;
+}

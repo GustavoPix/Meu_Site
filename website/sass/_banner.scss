@@ -1,0 +1,90 @@
+.bannerPrincipal{
+    height: calc(70vh);
+
+    h1{
+        font-family: $font1;
+        font-size: 40px;
+        color: $black2;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    h2{
+        font-family: $font2;
+        font-size: 40px;
+        color: $white1;
+        margin-bottom: 20px;
+        font-weight: normal;
+        span{
+            color: $color1;
+        }
+        .cursor{
+            border-right: 2px solid $white1;
+            animation-name: kf_cursorBanner;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+    p{
+        font-family: $font1;
+        font-size: 20px;
+        color: $black1;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+    .scrollDown{
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+        .img{
+            .ballScroll{
+                content: '';
+                display: block;
+                width: 4px;
+                height: 6px;
+                border-radius: 4px;
+                background: $black1;
+                position: absolute;
+                left: calc(50% - 2px);
+                animation-name: kf_ballScroll;
+                animation-duration: 1.25s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+            }
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+@keyframes kf_ballScroll{
+    0%{
+        top: 4px;
+        opacity: 0;
+    }
+    25%{
+        top: 4px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        top: 15px;
+        opacity: 0;
+    }
+}
+@keyframes kf_cursorBanner{
+    0%{
+        border-right: 2px solid rgba($white1,0);
+    }
+    49%{
+        border-right: 2px solid rgba($white1,0);
+    }
+    50%{
+        border-right: 2px solid $white1;
+    }
+}

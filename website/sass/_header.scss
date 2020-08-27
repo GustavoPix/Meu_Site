@@ -1,0 +1,138 @@
+.header{
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #28293D 60%, rgba(40, 41, 61, 0) 100%);
+    z-index: 3;
+    *{
+        font-family: $font1;
+        color: $white1;
+    }
+    h2{
+        font-weight: 700;
+        font-family: $font1;
+        font-size: 32px;
+    }
+    .buttonOpenMenu{
+        display: none;
+        *{
+            transition: 0.3s ease;
+        }
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        .closeMenu{
+            display: none;
+        }
+        p{
+            margin-left: 20px;
+            font-size: 28px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                margin-left: 20px;
+                font-size: 28px;
+                cursor: pointer;
+                transition: 0.3s ease;
+                a{
+                    color: $color1;
+                    transition: 0.3s ease;
+                }
+                &:hover{
+                    a{
+                        color: $white1;
+                    }
+                }
+            }
+            
+        }
+    }
+    @include responsive('s'){
+        .buttonOpenMenu{
+            display: block;
+            cursor: pointer;
+            &:hover{
+                *{
+                    stroke: $color1;
+                }
+            }
+        }
+        nav{
+            z-index: 3;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: auto;
+            height: 100vh;
+            background: $black3;
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-left: 2px solid $color1;
+            .closeMenu{
+                display: block;
+            }
+            >p{
+                padding-left: 20px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                &:hover{
+                    background: $black2;
+                }
+            }
+            ul{
+                display: block;
+                li{
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    a{
+                        padding-left: 60px;
+                        padding-right: 40px;
+                        transition: none;
+
+                    }
+                    &:hover{
+                        background: $black2;
+                    }
+                    
+                }
+            }
+            &:before{
+                content: '';
+                display: block;
+                width: 2px;
+                height: calc(100% + 20px);
+                background: $color1;
+                position: absolute;
+                left: 0px;
+                z-index: 2;
+                top: -20px;
+            }
+            &:after{
+                content: '';
+                display: none;
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background: linear-gradient(-90deg, #28293D 40%, rgba(40, 41, 61, 0) 100%);
+                z-index: -1;
+                top: 0;
+                left: 0;
+                opacity: 1;
+            }
+        }
+        .openMenu{
+            right: 0;
+            &:after{
+                display: block;
+            }
+        }
+    }
+}

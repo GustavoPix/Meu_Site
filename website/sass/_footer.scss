@@ -1,0 +1,20 @@
+.footer{
+    background: $color1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .container{
+        display: flex;
+        align-items: center;
+        .img{
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        p{
+            font-family: $font1;
+            font-size: 14px;
+            color: $white1;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.contatos{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    h2{
+        font-family: $font1;
+        font-size: 40px;
+        color: $black2;
+        margin-bottom: 20px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    ul{
+        li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            p{
+                margin-left: 10px;
+                a{
+                    font-family: $font1;
+                    font-size: 14px;
+                    color: $color1;
+                    transition: 0.3s ease;
+                    &:hover{
+                        color: $white1;
+                    }
+                }
+            }
+            &:last-child{
+                margin-bottom: 0px;
+
+            }
+        }
+    }
+}

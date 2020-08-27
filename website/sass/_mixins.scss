@@ -1,0 +1,30 @@
+@mixin responsive($size) {
+	@if $size == l {
+		@media screen and (min-width: $m-device) {
+			@content;
+		}
+	}
+	@else if $size == m {
+		@media screen and (min-width: $s-device) and (max-width: $m-device - 1) {
+			@content;
+		}
+	}
+	@else if $size == s {
+		@media screen and (max-width: $s-device - 1) {
+			@content;
+		}
+	}
+}
+
+@mixin mx-clearfix {
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    &::before{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,87 @@
+.sobre{
+    padding-top: 80px;
+    h2{
+        font-family: $font1;
+        font-size: 40px;
+        color: $black2;
+        margin-bottom: 20px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    .algoritimo{
+        p{
+            font-family: $font1;
+            font-size: 12px;
+            color: $white1;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            &:hover{
+                background: $black2;
+                &:before{
+                    background: $black2;
+                }
+            }
+            &:before{
+                content: '1';
+                font-family: $font1;
+                font-size: 12px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                padding-left: 10px;
+                display: block;
+                position: absolute;
+                left: -60px;
+                width: 50px;
+                background: $black3;
+                top: 0;
+                z-index: 1;
+                color: $black1;
+                height: 100%;
+            }
+            @for $i from 1 to 100{
+
+                &:nth-child(#{$i}){
+                    &:before{
+                        @if $i < 10{
+                            content: '\00a0#{$i}';
+                        }
+                        @else{
+                            content: '#{$i}';
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                &:before{
+                    height: auto;
+                }
+            }
+        }
+        @for $i from 0 to $columns {
+            .ident-#{$i}{
+                padding-left: #{$i*20}px;
+            }
+        }
+        .color1{
+            color: $color1;
+        }
+        .color2{
+            color: $color2;
+        }
+        .color3{
+            color: $color4;
+        }
+        .color4{
+            color: $color5;
+        }
+        .color5{
+            color: $color6;
+        }
+        .color6{
+            color: $color8;
+        }
+        .color7{
+            color: $color7;
+        }
+    }
+}
