@@ -10,22 +10,21 @@ require './vendor/autoload.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use Source\Models\Page;
 
-
-
+$c = new Slim\Container(SLIM_CONFIG);
 
 $c['notFoundHandler'] = function ($c) {
-    /*$page = new Page();
+    $page = new Page();
     $page->setTpl("error404",[
-        "nav"=>false
+        
     ]);
     return function ($request, $response) use ($c) {
         return $response->withStatus(404);
-    };*/
-    echo "erro 404";
+    };
 };
 
-$c = new Slim\Container(SLIM_CONFIG);
+
 
 $app = new Slim\App($c);
 
