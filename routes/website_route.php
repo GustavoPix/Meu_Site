@@ -32,7 +32,13 @@ $app->get('/projeto/configurator', function (Request $request, Response $respons
     ]);
     
 });
+$app->get('/projeto/listaTarefas', function (Request $request, Response $response, array $args) use ($app) {
 
+    $page = new Page();
+    $page->setTpl("listaTarefas",[
+    ]);
+    
+});
 
 
 ?>
