@@ -27,9 +27,9 @@
                 <h2>Tecnologias</h2>
                 <p>PHP, CSS, HTML, Vuejs, SASS, Slim Framework, Smarty, Javascript, Vagrant</p>
                 <p class="descricao">Lista de tarefas com adição, edição e exclusão de tarefas, além de criação de usuários.</p>
-                    <!--    
-                        <button>Clique e conheça</button>
-                    -->
+                <button>
+                    <a href="http://tarefas.gustavo-carvalho.com" target="_blank">Clique e conheça</a>
+                </button>
             </div>
             <div class="bottom">
                 <p><a href="/">Voltar</a></p>
