@@ -39,6 +39,22 @@ $app->get('/projeto/listaTarefas', function (Request $request, Response $respons
     ]);
     
 });
+$app->get('/projeto/snakejs', function (Request $request, Response $response, array $args) use ($app) {
+
+    $page = new Page();
+    $page->setTpl("snakejs",[
+    ]);
+    
+});
+
+
+$app->get('/games/snakejs', function (Request $request, Response $response, array $args) use ($app) {
+
+    $page = new Page();
+    $page->setTpl("gameSnakejs",[
+    ]);
+    
+});
 
 
 ?>

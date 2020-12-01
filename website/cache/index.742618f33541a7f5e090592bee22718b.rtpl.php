@@ -86,6 +86,17 @@
                     </a>
                 </div>
             </div>
+            <div class="listaTrabalhos">
+                <div class="grid-1"></div>
+                <div class="trabalho grid-3">
+                    <a href="/projeto/snakejs">
+                        <div class="img">
+                            <img src="<?php echo ROUTE_WEBSITE; ?>/img/snakejs.png" alt="">
+                        </div>
+                        <p>Snake.js</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container" id="sobre">
